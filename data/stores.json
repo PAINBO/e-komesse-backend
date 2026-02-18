@@ -1,0 +1,15 @@
+
+[
+	{"id":1,"name":"La Mode Paris","description":"Boutique de vêtements féminins avec sélection locale.","category":"Vêtements","city":"Paris","url":"#","tags":["robes","mode","français"],"rating":4.5},
+	{"id":2,"name":"TechShop Lyon","description":"Accessoires et gadgets électroniques.","category":"Électronique","city":"Lyon","url":"#","tags":["gadgets","smartphone","accessoires"],"rating":4.2},
+	{"id":3,"name":"Beauté & Co","description":"Cosmétiques naturels et soins de la peau.","category":"Beauté","city":"Marseille","url":"#","tags":["cosmétiques","bio"],"rating":4.7},
+	{"id":4,"name":"Maison Déco","description":"Objets déco et ameublement contemporain.","category":"Décoration","city":"Lille","url":"#","tags":["déco","maison"],"rating":4.1},
+	{"id":5,"name":"Sportif Direct","description":"Équipement et vêtements de sport.","category":"Sport","city":"Bordeaux","url":"#","tags":["running","fitness"],"rating":4.0},
+	{"id":6,"name":"Livres & Café","description":"Librairie indépendante avec coin café.","category":"Librairie","city":"Nantes","url":"#","tags":["livres","culture"],"rating":4.8},
+	{"id":7,"name":"Jouets Joyeux","description":"Jouets éducatifs pour enfants.","category":"Jouets","city":"Strasbourg","url":"#","tags":["enfants","cadeaux"],"rating":4.3},
+	{"id":8,"name":"Maison Verte","description":"Produits écologiques pour la maison.","category":"Maison","city":"Toulouse","url":"#","tags":["écolo","zéro déchet"],"rating":4.6},
+	{"id":9,"name":"Chaussures Élégantes","description":"Chaussures pour femmes et hommes.","category":"Chaussures","city":"Nice","url":"#","tags":["chaussures","cuir"],"rating":4.2},
+	{"id":10,"name":"Bijoux Atelier","description":"Bijoux artisanaux fabriqués en France.","category":"Bijoux","city":"Rouen","url":"#","tags":["artisanat","bijoux"],"rating":4.9},
+	{"id":11,"name":"Gourmet Market","description":"Épicerie fine et produits régionaux.","category":"Alimentation","city":"Dijon","url":"#","tags":["épicerie","gastronomie"],"rating":4.4},
+	{"id":12,"name":"Vintage Finds","description":"Vêtements vintage et pièces uniques.","category":"Vêtements","city":"Paris","url":"#","tags":["vintage","second-hand"],"rating":4.0}
+]

@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Recherche de boutiques</title>
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<script>
+		  // Require login: redirect to homepage if not authenticated
+		  try{
+		    const cur = localStorage.getItem('ek_current')
+		    if(!cur){ window.location.href = 'index0.html' }
+		  }catch(e){ console.warn('session check failed', e) }
+		</script>
+		<header class="site-header">
+			<div class="container header-inner">
+				<img src="IMG/Logo.png" alt="Logo" class="logo" />
+				<div class="brand">
+					<h1>Recherche de boutiques</h1>
+					<p class="tagline">Trouvez la boutique idéale près de chez vous</p>
+				</div>
+				<div class="user-actions" id="user-actions">
+					<!-- Filled by JS: user name, account link, logout -->
+				</div>
+			</div>
+		</header>
+
+		<main class="container main-content">
+			<div class="search-box">
+				<input id="search-input" type="search" placeholder="Rechercher une boutique, catégorie, ville..." autocomplete="off" />
+				<div id="suggestions" class="suggestions"></div>
+
+                
+                
+		        
+
+				<div class="opts">
+					<label class="opt"><input id="web-toggle" type="checkbox" /> Recherche web</label>
+				</div>
+			</div>
+
+			<div id="stats" class="stats"></div>
+
+			<div id="results" class="results"></div>
+
+			<div id="loading" class="loading">Chargement...</div>
+		</main>
+			<!-- Google Custom Search element (hidden until 'Recherche web' activée) -->
+			<div id="google-cse" style="display:none; max-width:920px; margin:18px auto;">
+				<gcse:searchbox-only gname="cse-searchbox"></gcse:searchbox-only>
+				<gcse:searchresults-only gname="cse-results"></gcse:searchresults-only>
+			</div>
+            
+		    <script src="js/app.js" defer></script>
+
+			<script async src="https://cse.google.com/cse.js?cx=259e32274c2234182"></script>
+        
+	</body>
+</html>

@@ -1,0 +1,87 @@
+/* Styles minimaux pour l'interface de recherche */
+:root{--bg:#f6f7fb;--card:#fff;--accent:#0b78ff;--muted:#6b7280}
+*{box-sizing:border-box}
+.site-header{background:linear-gradient(90deg,#ffffff 0%, #f7fbff 100%);border-bottom:1px solid #eef3fb}
+.header-inner{display:flex;align-items:center;gap:14px;padding:18px 20px;max-width:920px;margin:0 auto}
+.logo{width:82px;height:62px;object-fit:contain;border-radius:10px}
+.brand h1{margin:0;font-size:1.25rem}
+.tagline{margin:4px 0 0 0;color:var(--muted);font-size:0.95rem}
+/* Keep header (logo) visible when Google CSE or other overlays appear */
+.site-header{position:sticky;top:0;z-index:2000}
+.site-header, .header-inner{background:linear-gradient(90deg,#ffffff 0%, #f7fbff 100%)}
+body{font-family:Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);margin:0;color:#111}
+.container{max-width:920px;margin:22px auto;padding:0 20px}
+.main-content{padding-top:18px}
+#google-cse{margin-top:12px;z-index:100}
+/* Auth / signup styles */
+.auth-container{background:var(--card);padding:18px;border-radius:12px;border:1px solid #eef3fb;max-width:720px;margin:18px auto}
+.auth-container h3{margin-top:0}
+.form-field{margin-bottom:12px}
+.form-field label{display:block;margin-bottom:6px;color:var(--muted)}
+.form-field input{width:100%;padding:10px;border:1px solid #e6eefc;border-radius:8px}
+.form-actions{margin-top:12px}
+.btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none}
+.btn-secondary{display:inline-block;background:transparent;color:var(--accent);padding:10px 14px;border-radius:8px;text-decoration:none;border:1px solid rgba(11,120,255,0.12);margin-left:10px}
+.muted{color:var(--muted);margin-top:10px}
+h1{margin:0 0 18px 0;font-size:1.8rem}
+.search-box{position:relative;max-width:720px;margin:0 auto}
+#search-input{width:100%;padding:14px 16px;border:1px solid #e0e7ff;background:#fff;border-radius:12px;font-size:1rem;box-shadow:0 6px 20px rgba(11,120,255,0.06)}
+ .opts{margin-top:8px;display:flex;justify-content:flex-end}
+ .opt{font-size:0.9rem;color:var(--muted)}
+ .opt input{margin-right:8px}
+.suggestions{position:absolute;left:0;right:0;top:56px;background:var(--card);border:1px solid #e6e6e6;border-radius:8px;box-shadow:0 6px 18px rgba(13,38,76,0.08);z-index:30;max-height:220px;overflow:auto;display:none}
+.suggestions .item{padding:10px 12px;border-bottom:1px solid #f2f2f2;cursor:pointer}
+.suggestions .item:last-child{border-bottom:none}
+.suggestions .item:hover{background:#f3f7ff}
+.stats{margin:12px 0;color:var(--muted);font-size:0.95rem}
+.results{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:18px}
+.card{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(12,34,63,0.06);box-shadow:0 8px 24px rgba(12,34,63,0.04)}
+.card h3{margin:0 0 6px 0;font-size:1.06rem}
+.meta{font-size:0.9rem;color:var(--muted)}
+.tags{margin-top:10px}
+.tag{display:inline-block;background:#eef6ff;color:#0b78ff;padding:6px 9px;border-radius:999px;font-size:0.8rem;margin-right:6px}
+.loading{display:none;text-align:center;padding:12px;color:var(--muted)}
+
+@media(max-width:480px){.container{padding:12px}h1{font-size:1.4rem}}
+
+/* simple dark theme support applied on documentElement */
+:root.theme-dark, .theme-dark{background:#0f1113;color:#e6eef8}
+:root.theme-dark .card, .theme-dark .card{background:#0b0c0e;border-color:rgba(255,255,255,0.04)}
+:root.theme-dark .tag{background:#1a2230;color:#a7c7ff}
+:root.theme-dark #search-input{background:#0b0c0e;color:#e6eef8;border-color:#1e2933}
+
+/* Hero background for index0.html */
+.hero-bg{position:relative;border-radius:12px;overflow:hidden;padding:48px 20px;margin-bottom:18px}
+.hero-bg::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(6,10,20,0.45), rgba(6,10,20,0.35));background-size:cover;background-position:center;filter:contrast(95%);z-index:0}
+.hero-bg .hero-content{position:relative;z-index:2;color:#fff;max-width:860px;margin:0 auto;text-align:center}
+.hero-bg h2{font-size:2.1rem;margin:0 0 8px 0}
+.hero-bg p{margin:0 0 12px 0;color:rgba(255,255,255,0.92)}
+
+/* Animations */
+.hero-content{animation:fadeUp 700ms ease both}
+.hero-content h2{animation:fadeUp 700ms ease both;animation-delay:80ms}
+.hero-content p{animation:fadeUp 900ms ease both;animation-delay:160ms}
+.hero-content .btn-primary, .hero-content .btn-secondary{transform:translateY(0);transition:transform .28s ease, box-shadow .28s ease}
+.hero-content .btn-primary:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(11,120,255,0.12)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* full-page background when body has hero-page */
+body.hero-page{background-image:linear-gradient(rgba(6,10,20,0.35), rgba(6,10,20,0.25)), url('../IMG/image01.jpg');background-size:cover;background-position:center;background-attachment:fixed;min-height:100vh}
+body.hero-page .site-header{background:linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(247,251,255,0.85) 100%)}
+
+/* When using full-page background, soften auth containers with blur and animation */
+body.hero-page .auth-container{background:rgba(255,255,255,0.06);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.08);box-shadow:0 12px 40px rgba(2,6,23,0.45);color:#fff;padding:22px;border-radius:12px;animation:panelIn .6s cubic-bezier(.2,.9,.3,1) both}
+body.hero-page .auth-container h3{color:#fff}
+body.hero-page .auth-container input{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff}
+body.hero-page .auth-container label{color:rgba(255,255,255,0.9)}
+body.hero-page .auth-container .muted{color:rgba(255,255,255,0.78)}
+body.hero-page .btn-primary{background:var(--accent);color:#fff}
+
+@keyframes panelIn{from{opacity:0;transform:translateY(10px) scale(.995)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+/* Center and size the signup/login panels on pages with full-page background */
+body.hero-page .container .auth-container{max-width:560px;margin:26px auto;padding:26px}
+@media(max-width:680px){body.hero-page .container .auth-container{margin:18px 12px;padding:18px}}
+
+

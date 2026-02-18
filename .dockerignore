@@ -1,0 +1,9 @@
+node_modules
+.env
+.git
+*.log
+IMG/*.psd
+IMG/*.xcf
+uploads
+dist
+**/.DS_Store

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mon compte — E-komesse</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .account-actions{display:flex;gap:8px;align-items:center;margin-top:12px}
+    .small{font-size:0.9rem;color:var(--muted)}
+    .fav-item{display:flex;justify-content:space-between;align-items:center;padding:8px;border-bottom:1px solid #eee}
+    .danger{background:#ffefef;border-color:#ffbcbc;color:#8a0505}
+    textarea.import-area{width:100%;height:120px;border:1px solid #e6eefc;padding:8px;border-radius:8px}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <img src="IMG/Logo.png" alt="Logo" class="logo" />
+      <div class="brand"><h1>Mon compte</h1><p class="tagline">Gérez votre profil et vos préférences</p></div>
+      <div id="user-actions" class="user-actions"></div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <div class="auth-container">
+      <h3>Profil</h3>
+      <div class="form-field"><label>Nom</label><input id="name" type="text" /></div>
+      <div class="form-field"><label>Email</label><input id="email" type="email" /></div>
+      <div class="form-field"><label>Nouveau mot de passe <span class="small">(laisser vide pour conserver)</span></label><input id="password" type="password" /></div>
+      <div class="form-field"><label>Confirmer mot de passe</label><input id="password2" type="password" /></div>
+
+      <h3>Préférences</h3>
+      <div class="form-field">
+        <label>Thème</label>
+        <select id="theme"><option value="light">Clair</option><option value="dark">Sombre</option></select>
+      </div>
+      <div class="form-field"><label><input id="notifications" type="checkbox" /> Recevoir les notifications</label></div>
+
+      <div class="account-actions">
+        <button id="save-btn" class="btn-primary">Enregistrer</button>
+        <button id="logout-btn" class="btn-secondary">Se déconnecter</button>
+        <button id="delete-btn" class="btn-secondary danger">Supprimer le compte</button>
+      </div>
+
+      <h3 style="margin-top:18px">Favoris</h3>
+      <div id="favorites-list"></div>
+
+      <h3 style="margin-top:18px">Sauvegarde / Restauration</h3>
+      <div class="form-field"><button id="export-btn" class="btn-secondary">Exporter le compte (JSON)</button></div>
+      <div class="form-field"><label>Importer depuis JSON</label><textarea id="import-area" class="import-area" placeholder='Collez ici le JSON exporté'></textarea></div>
+      <div class="form-actions"><button id="import-btn" class="btn-primary">Importer</button></div>
+    </div>
+  </main>
+
+  <script src="js/account.js" defer></script>
+</body>
+</html>
